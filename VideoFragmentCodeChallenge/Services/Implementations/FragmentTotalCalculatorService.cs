@@ -7,7 +7,7 @@ using VideoFragmentCodeChallenge.Services.Interfaces;
 
 namespace VideoFragmentCodeChallenge.Services.Implementations
 {
-    internal class FragmentTotalCalculatorService : IFragmentTotalCalculatorService
+    public class FragmentTotalCalculatorService : IFragmentTotalCalculatorService
     {
         /* Coding Challenge: Things I thought of
          * 
