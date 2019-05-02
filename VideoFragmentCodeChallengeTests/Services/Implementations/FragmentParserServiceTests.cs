@@ -62,8 +62,8 @@ namespace VideoFragmentCodeChallengeTests.Services.Implementations
             var result = sut.Parse(fragmentLine);
 
             // Assert
-            Assert.That(result.StartTime, Is.EqualTo("2"));
-            Assert.That(result.StartTime, Is.EqualTo("5"));
+            Assert.That(result.StartTime, Is.EqualTo(2));
+            Assert.That(result.EndTime, Is.EqualTo(5));
         }
     }
 }
