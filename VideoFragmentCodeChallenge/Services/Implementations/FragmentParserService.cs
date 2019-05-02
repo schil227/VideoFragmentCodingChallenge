@@ -13,7 +13,7 @@ namespace VideoFragmentCodeChallenge.Services.Implementations
      *      Since it's realistic that someone would input a comma in 
      */
 
-    internal class FragmentParserService : IFragmentParserService
+    public class FragmentParserService : IFragmentParserService
     {
         private readonly Regex digitRegex = new Regex(@"^(\d+):(\d+)$", RegexOptions.Compiled);
         private readonly Regex trimRegex = new Regex(@"[\s+]?[,]?[.]?", RegexOptions.Compiled);
