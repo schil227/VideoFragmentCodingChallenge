@@ -8,11 +8,6 @@ using VideoFragmentCodeChallenge.Services.Interfaces;
 
 namespace VideoFragmentCodeChallenge.Services.Implementations
 {
-    /* Coding Challenge: Things I thought of
-     * 
-     *      Since it's realistic that someone would input a comma in 
-     */
-
     public class FragmentParserService : IFragmentParserService
     {
         private readonly Regex digitRegex = new Regex(@"^(\d+):(\d+)$", RegexOptions.Compiled);

@@ -9,7 +9,7 @@ using VideoFragmentCodeChallenge.Services.Interfaces.Factories;
 
 namespace VideoFragmentCodeChallenge.Services.Implementations
 {
-    internal class FragmentLoaderService : IFragmentLoaderService
+    public class FragmentLoaderService : IFragmentLoaderService
     {
         public readonly IStreamReaderFactory streamReaderFactory;
         public readonly IFragmentParserService fragmentParserService;
@@ -40,7 +40,7 @@ namespace VideoFragmentCodeChallenge.Services.Implementations
 
                     while ((line = file.ReadLine()) != null)
                     {
-                        if (!line.StartsWith('#') && line != string.Empty)
+                        if (!line.StartsWith('#') && !string.IsNullOrWhiteSpace(line))
                         {
                             fragments.Add(fragmentParserService.Parse(line));
                         }
