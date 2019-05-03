@@ -5,7 +5,7 @@ using VideoFragmentCodeChallenge.DataModel;
 
 namespace VideoFragmentCodeChallenge.Services.Interfaces
 {
-    public interface IFragmentTotalCalculatorService
+    public interface IUniqueViewTimeCalculatorService
     {
         int CalculateTotal(IReadOnlyCollection<Fragment> fragments);
     }

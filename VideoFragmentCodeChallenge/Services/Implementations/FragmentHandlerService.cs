@@ -8,22 +8,22 @@ namespace VideoFragmentCodeChallenge.Services.Implementations
     public class FragmentHandlerService : IFragmentHandlerService
     {
         private readonly IFragmentLoaderService fragmentLoaderService;
-        private readonly IFragmentTotalCalculatorService fragmentTotalCalculatorService;
+        private readonly IUniqueViewTimeCalculatorService uniqueViewTimeCalculatorService;
 
         public FragmentHandlerService(
             IFragmentLoaderService fragmentLoaderService,
-            IFragmentTotalCalculatorService fragmentTotalCalculatorService
+            IUniqueViewTimeCalculatorService uniqueViewTimeCalculatorService
             )
         {
             this.fragmentLoaderService = fragmentLoaderService;
-            this.fragmentTotalCalculatorService = fragmentTotalCalculatorService;
+            this.uniqueViewTimeCalculatorService = uniqueViewTimeCalculatorService;
         }
 
         public int Handle(string fragmentDataFileName)
         {
             var fragments = fragmentLoaderService.Load(fragmentDataFileName);
 
-            return fragmentTotalCalculatorService.CalculateTotal(fragments);
+            return uniqueViewTimeCalculatorService.CalculateTotal(fragments);
         }
     }
 }

@@ -7,17 +7,17 @@ using VideoFragmentCodeChallenge.Services.Interfaces;
 
 namespace VideoFragmentCodeChallenge.Services.Implementations
 {
-    public class FragmentTotalCalculatorService : IFragmentTotalCalculatorService
+    public class UniqueViewTimeCalculatorService : IUniqueViewTimeCalculatorService
     {
         /* Coding Challenge: Things I thought of
          * 
-         *      To sort, or not?
+         *      Sort here or there?
          *      I decided it's the responsibility of this class to not only 
-         *  total the portion of the video watched, but also to sort the 
-         *  fragments coming in. One could argue that the fragments getting
-         *  passed to the CaculateTotal function should be prepared properly,
-         *  however ANY service could use this class due to abstraction.
-         *      More, it contributes to the robustness of calculating the total.
+         *  total the UVT, but also to sort the fragments coming in. One could 
+         *  argue that the fragments getting passed to the CaculateTotal 
+         *  function should be prepared properly, however ANY service could 
+         *  use this class due to abstraction.
+         *      More, it contributes to the robustness of calculating the total UVT.
          *  At the performance cost of calling OrderBy, we're guaranteed to
          *  calculate the total correctly. Also, we've removed the requirement
          *  that fragments must be sorted before calculating the total (an 

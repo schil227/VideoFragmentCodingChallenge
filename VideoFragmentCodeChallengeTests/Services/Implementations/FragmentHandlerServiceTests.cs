@@ -16,7 +16,7 @@ namespace VideoFragmentCodeChallengeTests.Services.Implementations
     public class FragmentHandlerServiceTests
     {
         private MockRepository moq;
-        private Mock<IFragmentTotalCalculatorService> mockFragmentTotalCalculatorService;
+        private Mock<IUniqueViewTimeCalculatorService> mockUniqueViewTimeCalculatorService;
         private Mock<IFragmentLoaderService> mockFragmentLoaderService;
         private IFragmentHandlerService sut;
 
@@ -24,9 +24,9 @@ namespace VideoFragmentCodeChallengeTests.Services.Implementations
         public void SetUp()
         {
             moq = new MockRepository(MockBehavior.Strict);
-            mockFragmentTotalCalculatorService = moq.Create<IFragmentTotalCalculatorService>();
+            mockUniqueViewTimeCalculatorService = moq.Create<IUniqueViewTimeCalculatorService>();
             mockFragmentLoaderService = moq.Create<IFragmentLoaderService>();
-            sut = new FragmentHandlerService(mockFragmentLoaderService.Object, mockFragmentTotalCalculatorService.Object);
+            sut = new FragmentHandlerService(mockFragmentLoaderService.Object, mockUniqueViewTimeCalculatorService.Object);
         }
 
         [TearDown]
@@ -43,7 +43,7 @@ namespace VideoFragmentCodeChallengeTests.Services.Implementations
             };
 
             mockFragmentLoaderService.Setup(s => s.Load(fragmentFileName)).Returns(loadedFragments);
-            mockFragmentTotalCalculatorService.Setup(s => s.CalculateTotal(loadedFragments)).Returns(0);
+            mockUniqueViewTimeCalculatorService.Setup(s => s.CalculateTotal(loadedFragments)).Returns(0);
 
             // Act
             var result = sut.Handle(fragmentFileName);

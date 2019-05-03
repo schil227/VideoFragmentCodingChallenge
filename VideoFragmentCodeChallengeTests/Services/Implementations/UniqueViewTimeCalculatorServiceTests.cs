@@ -8,14 +8,14 @@ using VideoFragmentCodeChallenge.Services.Interfaces;
 
 namespace VideoFragmentCodeChallengeTests.Services.Implementations
 {
-    public class FragmentTotalCalculatorServiceTests
+    public class UniqueViewTimeCalculatorServiceTests
     {
-        private IFragmentTotalCalculatorService sut;
+        private IUniqueViewTimeCalculatorService sut;
 
         [SetUp]
         public void SetUp()
         {
-            sut = new FragmentTotalCalculatorService();
+            sut = new UniqueViewTimeCalculatorService();
         }
 
         [Test]
