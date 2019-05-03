@@ -8,6 +8,13 @@ namespace VideoFragmentCodeChallenge
     {
         static int Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Please specifiy a file when calling this program.");
+                Console.WriteLine(@"E.g.: .\VideoFragmentCodingChallenge.exe .\myTestData.txt");
+                return 0;
+            }
+
             var services = new ServiceCollection();
             CompositionRoot.AddServices(services);
 

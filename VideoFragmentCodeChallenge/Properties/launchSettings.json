@@ -1,8 +1,7 @@
 {
   "profiles": {
     "VideoFragmentCodeChallenge": {
-      "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\Adrian\\source\\repos\\VideoFragmentCodeChallenge\\VideoFragmentCodeChallenge\\testData.txt"
+      "commandName": "Project"
     }
   }
 }
