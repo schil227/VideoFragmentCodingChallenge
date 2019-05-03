@@ -24,5 +24,5 @@ And the output would follow:
 
 ```
 Processing Fragments from file .\myTestData.txt
-Total time of fragments: 8
+Total Unique View Time: 8
 ```
