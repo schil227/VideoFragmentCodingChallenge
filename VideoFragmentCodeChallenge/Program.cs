@@ -26,7 +26,7 @@ namespace VideoFragmentCodeChallenge
 
             var totalTimeInMs = fragmentHandlingService.Handle(args[0]);
 
-            Console.WriteLine($"Total time of fragments: {totalTimeInMs}");
+            Console.WriteLine($"Total Unique View Time: {totalTimeInMs}");
             Console.ReadKey();
 
             return totalTimeInMs;
